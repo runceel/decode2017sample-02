@@ -29,9 +29,27 @@ namespace DemoDemoApp.UITest
         public void AppLaunches()
         {
             app.Screenshot("First screen.");
-            var listViewItem = app.Query(x => x.Id("ItemsListView").Child()).First();
-            app.Tap(listViewItem.Id);
-            app.Screenshot("detail screen.");
+            app.Tap(x => x.Marked("ItemsListView").Child(0).Child(0));
+            app.Screenshot("Detail page.");
+        }
+
+        [Test]
+        public void AddItem()
+        {
+            app.Screenshot("First screen.");
+            app.Tap(x => x.Marked("toolbar").Child(0));
+            app.Screenshot("Item add screen.");
+            app.EnterText("EntryText", "Test text");
+            app.EnterText("EditorDescription", "Test description");
+            app.Screenshot("Enter data.");
+            app.Tap(x => x.Marked("toolbar").Child(0));
+            app.Screenshot("Item added");
+        }
+
+        [Test]
+        public void Repl()
+        {
+            app.Repl();
         }
     }
 }
