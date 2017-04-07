@@ -4,6 +4,8 @@ using DemoDemoApp.Models;
 using DemoDemoApp.ViewModels;
 
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile.Analytics;
+using System.Collections.Generic;
 
 namespace DemoDemoApp.Views
 {
@@ -38,7 +40,9 @@ namespace DemoDemoApp.Views
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();
-
+            Analytics.TrackEvent(
+                "ItemsPage appearing.",
+                new Dictionary<string, string> { { "Category", "Trace" } });
 			if (viewModel.Items.Count == 0)
 				viewModel.LoadItemsCommand.Execute(null);
 		}
