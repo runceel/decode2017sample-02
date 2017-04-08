@@ -21,6 +21,8 @@ namespace DemoDemoApp.Services
 
 			items.Add(item);
 
+            await MobileCenterHolder.Client.GetTable<Tasks>().InsertAsync(new Tasks { Text = item.Text });
+
 			return await Task.FromResult(true);
 		}
 

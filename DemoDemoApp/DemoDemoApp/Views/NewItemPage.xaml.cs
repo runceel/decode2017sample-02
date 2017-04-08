@@ -3,6 +3,8 @@
 using DemoDemoApp.Models;
 
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile.Analytics;
+using System.Collections.Generic;
 
 namespace DemoDemoApp.Views
 {
@@ -28,5 +30,13 @@ namespace DemoDemoApp.Views
 			MessagingCenter.Send(this, "AddItem", Item);
 			await Navigation.PopToRootAsync();
 		}
-	}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Analytics.TrackEvent(
+                "NewItemPage appearing.",
+                new Dictionary<string, string> { { "Category", "Trace" } });
+        }
+    }
 }
