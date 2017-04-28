@@ -14,7 +14,7 @@ namespace DemoDemoApp.UITest
             {
                 return ConfigureApp
                     .Android
-                    .InstalledApp("com.companyname.DemoDemoApp")
+                    .InstalledApp("jp.okazuki.DemoDemoApp")
                     .StartApp();
             }
 
