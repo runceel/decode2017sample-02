@@ -28,9 +28,12 @@ namespace DemoDemoApp.ViewModels
                     await MobileCenterHolder.Client.LoginAsync(
                         Forms.Context,
                         MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
-#else
+#elif __IOS__
                     await MobileCenterHolder.Client.LoginAsync(
                         UIKit.UIApplication.SharedApplication.KeyWindow.RootViewController,
+                        MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+#elif WINDOWS_UWP
+                    await MobileCenterHolder.Client.LoginAsync(
                         MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
 #endif
                 }
