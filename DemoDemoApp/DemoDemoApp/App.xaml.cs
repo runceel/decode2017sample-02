@@ -2,7 +2,6 @@
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
-using Microsoft.Azure.Mobile.Distribute;
 using System;
 using System.Diagnostics;
 using Xamarin.Forms;
@@ -42,16 +41,12 @@ namespace DemoDemoApp
         protected override void OnStart()
         {
             base.OnStart();
-#if __IOS__
-            Distribute.DontCheckForUpdatesInDebug();
-#endif
             try
             {
                 MobileCenter.Start("ios=8cef8dda-c9a4-48a2-be55-a88946aa73c9;" +
                        "android=17df10dd-34f3-44d6-ae48-0d89f070793a",
                     typeof(Analytics),
-                    typeof(Crashes),
-                    typeof(Distribute));
+                    typeof(Crashes));
             }
             catch (Exception ex)
             {

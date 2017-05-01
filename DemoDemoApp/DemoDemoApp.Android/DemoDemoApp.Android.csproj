@@ -115,12 +115,6 @@
     <Reference Include="Microsoft.Azure.Mobile.Analytics">
       <HintPath>..\..\packages\Microsoft.Azure.Mobile.Analytics.0.9.2\lib\MonoAndroid403\Microsoft.Azure.Mobile.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Distribute.Android.Bindings">
-      <HintPath>..\..\packages\Microsoft.Azure.Mobile.Distribute.0.9.2\lib\MonoAndroid403\Microsoft.Azure.Mobile.Distribute.Android.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Distribute">
-      <HintPath>..\..\packages\Microsoft.Azure.Mobile.Distribute.0.9.2\lib\MonoAndroid403\Microsoft.Azure.Mobile.Distribute.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Azure.Mobile.Crashes.Android.Bindings">
       <HintPath>..\..\packages\Microsoft.Azure.Mobile.Crashes.0.9.2\lib\MonoAndroid403\Microsoft.Azure.Mobile.Crashes.Android.Bindings.dll</HintPath>
     </Reference>
