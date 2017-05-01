@@ -39,10 +39,15 @@ namespace DemoDemoApp.UITest
             app.Screenshot("First screen.");
             app.Tap(x => x.Marked("toolbar").Child(0));
             app.Screenshot("Item add screen.");
+            app.ClearText("EntryText");
             app.EnterText("EntryText", "Test text");
+            app.ClearText("EditorDescription");
             app.EnterText("EditorDescription", "Test description");
             app.Screenshot("Enter data.");
             app.Tap(x => x.Marked("toolbar").Child(0));
+            var newListViewItem = app.Query(x => x.Marked("LabelText")).LastOrDefault();
+            Assert.IsNotNull(newListViewItem);
+            Assert.AreEqual("Test text", newListViewItem.Text);
             app.Screenshot("Item added");
         }
 
