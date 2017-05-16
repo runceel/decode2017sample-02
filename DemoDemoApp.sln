@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DemoDemoApp", "DemoDemoApp\DemoDemoApp\DemoDemoApp.shproj", "{95250F72-522D-4F22-AC3F-C6F777C0FC60}"
 EndProject
@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDemoApp.UWP", "DemoDemoApp\DemoDemoApp.UWP\DemoDemoApp.UWP.csproj", "{91AA19CB-5FA7-4EC7-A1EF-AA1E54F1544E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDemoApp.UITest", "DemoDemoApp.UITest\DemoDemoApp.UITest.csproj", "{AF53E03F-66F0-491F-BCA8-43ACE50BC047}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf", "conf", "{70199A24-37E3-4FB7-B3B3-58FC96537B3C}"
+	ProjectSection(SolutionItems) = preProject
+		conf\kaota.keystore = conf\kaota.keystore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
