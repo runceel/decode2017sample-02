@@ -27,14 +27,14 @@ namespace DemoDemoApp.ViewModels
 #if __ANDROID__
                     await MobileCenterHolder.Client.LoginAsync(
                         Forms.Context,
-                        MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                        MobileServiceAuthenticationProvider.Twitter);
 #elif __IOS__
                     await MobileCenterHolder.Client.LoginAsync(
                         UIKit.UIApplication.SharedApplication.KeyWindow.RootViewController,
-                        MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                        MobileServiceAuthenticationProvider.Twitter);
 #elif WINDOWS_UWP
                     await MobileCenterHolder.Client.LoginAsync(
-                        MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                        MobileServiceAuthenticationProvider.Twitter);
 #endif
                 }
                 catch (Exception ex)
